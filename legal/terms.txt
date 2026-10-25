@@ -1,0 +1,116 @@
+# U10 Terms of Service
+
+Effective date: 12 October 2026
+
+These Terms of Service ("Terms") are a binding agreement between you and GOB Interactive ("GOB Interactive", "we", "us", "our") for your use of the U10 mobile card game and the online services behind it (together, the "Game"). Please read them carefully. By tapping the consent box on the sign-in screen, or by installing or playing the Game, you confirm that you have read, understood and accepted these Terms and our Privacy Policy. If you do not agree, do not use the Game.
+
+## 1. Who can play
+
+- You must be at least 13 years old to play U10. We ask for your birth year when you set up your profile and cannot let you in if you are under 13.
+- If you are under 18 (or under the age of majority where you live), you may play only with the permission and supervision of a parent or legal guardian, who accepts these Terms on your behalf and is responsible for your use of the Game.
+- You must have the legal capacity to enter into this agreement, and you must not be barred from using the Game under any law that applies to you.
+- You must give us a true birth year. Giving a false one is a breach of these Terms.
+
+## 2. Your account
+
+- You sign in with your Google account. We give your account a Player ID, a display name and an avatar. We never see your Google password.
+- You are responsible for everything that happens under your account and for keeping your device and Google account secure. Tell us at once if you think someone else is using your account.
+- One person, one account. You may not sell, share, rent, transfer or buy accounts.
+- Your display name and avatar are visible to other players. They must follow section 6.
+
+## 3. What U10 is
+
+- U10 is a casual multiplayer card game for entertainment. You play against other people or against computer-controlled players in PLAY NOW tables, private rooms with friends, and PRACTICE.
+- U10 is a social game of skill and luck played for fun with virtual items only. There are no real-money stakes, no cash prizes, and nothing you can win or buy in the Game can be turned into money, goods or services outside the Game.
+- Game rules, scoring, tables, entry fees, rewards and features are described in the Game and may be changed by us over time (see section 10).
+
+## 4. Virtual items
+
+- The Game uses virtual items such as Coins, XP, levels, level rewards, daily login rewards, Lucky Hand rewards, and cosmetic items. We call these "Virtual Items".
+- Virtual Items have no monetary value. They are not property, they are not a currency or e-money, and they are not redeemable for cash or anything of value outside the Game.
+- We give you a limited, personal, non-exclusive, non-transferable, revocable licence to use Virtual Items inside the Game only. We own all Virtual Items; your balance is a record in our system.
+- You may not buy, sell, trade, gift, transfer or otherwise exchange Virtual Items or accounts for money or anything of value, and you may not offer to do so. You may not use Coins for gambling of any kind.
+- Coins you spend as a table entry fee or a private room fee are used up for that match or room according to the rules shown in the Game before you confirm. Where the Game says a fee is returned (for example when a room is closed before it starts), it is returned to your balance.
+- We may add, change, rebalance, reset or remove Virtual Items, prices, fees and rewards, for example to fix errors, stop abuse, keep the Game fair, or because a feature changes. Where practical we will tell you in advance for material changes.
+- If we introduce purchases with real money in the future, we will update these Terms and show the price, taxes and refund rules before you buy. Purchases made through Google Play are also subject to Google Play's own terms and refund policy.
+
+## 5. Rewarded ads
+
+- Some rewards (such as Lucky Hand) may be offered after you choose to watch a video advertisement. Watching an ad is always optional; core gameplay does not require it.
+- Ads are provided by third-party advertising networks, which have their own terms and privacy policies. We are not responsible for the content of third-party ads.
+- If an ad does not complete or fails to load, the reward may not be granted. We may withhold rewards that we believe were obtained through fraud, automation or abuse.
+
+## 6. Fair play and conduct
+
+You agree that you will not:
+
+- cheat, exploit bugs or glitches, or use bots, scripts, macros, emulator tricks, memory editors, speed hacks, modified clients or any tool that gives an unfair advantage;
+- reverse engineer, decompile, tamper with or interfere with the Game, our servers or the network traffic between them, or try to send false requests or false match results;
+- create multiple accounts to gain rewards or advantages, collude with other players, deliberately lose to help someone else, or manipulate leaderboards;
+- harass, threaten, bully, discriminate against, or impersonate other people, or choose a display name that is offensive, hateful, sexual, misleading or that contains someone else's personal information;
+- use the Game for anything illegal, to spam, to advertise, or to collect other players' information;
+- try to gain unauthorised access to accounts, servers or data, or disrupt the Game (including denial-of-service attacks);
+- distribute modified or pirated copies of the Game.
+
+We use automated and manual checks to keep the Game fair. Matches, results, balances and rewards are decided by our servers, and our records are final unless we find an error.
+
+## 7. Reporting problems and other players
+
+- You can report a problem, a bug, abuse or another player from the Settings screen. A report includes what you write, the category you choose, your Player ID and display name, and basic technical details such as your app version and device model, so that we can look into it.
+- You can also contact us by email at noobstudios.in@gmail.com.
+- We may review reports and take action, including warnings, removing content, resetting Virtual Items, temporary suspension or permanent termination. We are not obliged to tell you the outcome of a report.
+
+## 8. Suspension and termination
+
+- You may stop playing at any time. You can delete your account in the game (Settings, Support, Delete Account): it is permanently deleted 30 days later unless you sign in again before then, as described in our Privacy Policy.
+- We may warn, restrict, suspend or terminate your account, remove Virtual Items, or block your devices if you break these Terms, if we are required to by law, if we believe your account is a security risk, or if we stop offering the Game. For serious breaches (such as cheating, fraud, or abuse of other players) we may do this without warning.
+- When your account is closed, your Virtual Items and progress are lost and cannot be restored, except where the law says otherwise.
+- Sections that by their nature should continue (including 4, 9, 11, 12 and 13) survive termination.
+
+## 9. Our property
+
+- The Game, including its software, artwork, animation, card designs, user interface, sound, music, names, logos, and all related intellectual property, belongs to GOB Interactive or its licensors and is protected by law. Some components are used under open-source or third-party licences, listed under Credits in the Game.
+- We give you a limited, personal, non-exclusive, non-transferable, revocable licence to install and play the Game on devices you own or control, for personal non-commercial use and subject to these Terms.
+- You may not copy, modify, sell, rent, sublicense or create derivative works from the Game, except as the law allows despite this restriction.
+- You may share screenshots and videos of your play for personal, non-commercial purposes, as long as you do not misrepresent them or break these Terms.
+- If you send us feedback, ideas or reports, you allow us to use them without payment or obligation to you.
+
+## 10. Availability and changes
+
+- The Game is an online service. We may update, change, suspend or discontinue any part of it at any time, for example for maintenance, security, legal reasons or business reasons. We try to keep the Game running but do not promise that it will always be available, uninterrupted or error free.
+- You need an internet connection and a compatible device. Your mobile data charges and device costs are yours.
+- We may require you to update the app to keep playing.
+- We may change these Terms. When we make a material change we will show the new Terms in the Game and ask you to accept them again. If you do not accept them, you may not continue to play, and you can ask us to delete your account.
+
+## 11. Disclaimers
+
+- To the fullest extent permitted by law, the Game is provided "as is" and "as available", without warranties of any kind, whether express or implied, including fitness for a particular purpose, non-infringement, and accuracy.
+- We do not guarantee that the Game will be free from errors or interruptions, that your progress or Virtual Items will never be lost, or that matches will always complete (for example when a connection is lost).
+- Nothing in these Terms excludes or limits any right you have under law that cannot be excluded or limited.
+
+## 12. Limit of liability
+
+- To the fullest extent permitted by law, GOB Interactive, its owners, employees and partners are not liable for any indirect, incidental, special, consequential or punitive damages, or for loss of data, progress, Virtual Items, profits or goodwill, arising from your use of or inability to use the Game.
+- Our total liability to you for any claim related to the Game is limited to the greater of the amount you paid us for the Game in the 12 months before the claim (which may be nothing) or INR 1,000.
+- You agree to indemnify and hold us harmless against claims, losses and costs arising from your breach of these Terms or your misuse of the Game, to the extent permitted by law.
+- Nothing in these Terms limits liability that cannot be limited by law, such as liability for fraud or for death or personal injury caused by negligence.
+
+## 13. Governing law and disputes
+
+- These Terms are governed by the laws of India. Subject to any mandatory consumer rights you have where you live, the courts in India have exclusive jurisdiction over disputes arising from these Terms or the Game.
+- Before starting a formal dispute, please contact us at noobstudios.in@gmail.com and give us 30 days to try to resolve the issue informally.
+
+## 14. General
+
+- These Terms, together with the Privacy Policy, are the whole agreement between you and us about the Game and replace any earlier agreement about it.
+- If a part of these Terms is found to be unenforceable, the rest stays in effect.
+- If we do not enforce a right, it does not mean we give it up.
+- You may not transfer your rights under these Terms. We may transfer ours, for example if the Game is sold to another company.
+- Notices from us may be given in the Game or by email to the address linked to your Google account.
+
+## 15. Contact
+
+GOB Interactive
+Email: noobstudios.in@gmail.com
+
+Questions about these Terms, requests, and complaints can be sent to this address. We aim to reply within 7 working days.

@@ -1,0 +1,122 @@
+# U10 Privacy Policy
+
+Effective date: 12 October 2026
+
+GOB Interactive ("GOB Interactive", "we", "us", "our") makes U10, a multiplayer card game for mobile devices. This Privacy Policy explains what personal data we collect when you use U10 and its online services (the "Game"), why we collect it, who we share it with, how long we keep it, and what choices and rights you have. We handle your data in line with the Digital Personal Data Protection Act, 2023 and the Information Technology Act, 2000 of India, and, where they apply to you, other laws such as the GDPR.
+
+By signing in and playing, you agree to the practices described here. If you do not agree, please do not use the Game.
+
+## 1. Who is responsible for your data
+
+GOB Interactive is the data fiduciary (controller) of the personal data described in this policy.
+
+Contact and grievance officer: GOB Interactive, noobstudios.in@gmail.com
+
+## 2. What we collect
+
+Information you give us or that comes from your Google or Facebook account
+
+- Google sign-in data: when you sign in with Google we receive your Google account identifier, your email address, your name or display name and your profile picture address, as provided by Google. We never receive your Google password.
+- Facebook sign-in data: when you sign in with Facebook we receive your Facebook account identifier, your name and, if you allow it, your email address, as provided by Facebook (the public_profile and email permissions only). We never receive your Facebook password, your friends list, your posts or your photos.
+- Profile details: the display name and avatar you choose, and your birth year (used only to confirm that you meet our age requirement and to apply age-related protections).
+- Game identifiers: a Player ID that we create, and, if you use guest sign-in on a device, a device-based sign-in identifier.
+- Reports and messages you send us: when you use Report a Problem, we store the category, your description, your Player ID and display name, and technical details described below. If you email us, we keep the email and your address.
+
+Information created when you play
+
+- Gameplay and progress: your Coin balance and transactions, XP and level, matches played and won, match results and recent games, daily login and reward claims, Lucky Hand plays and rewards, cosmetic items, and leaderboard standing.
+- Social features: your friends list, friend requests and invitations, and private room codes and membership.
+- Other players can see your display name, avatar, Player ID, level, and leaderboard entries (including your Coin total) and, in matches, your play.
+
+Technical information collected automatically
+
+- Device and app information: app version, operating system and version, device model, language, and the time zone and settings that the Game needs to run.
+- Connection information: IP address, connection and session logs, error and crash information, and timestamps. We use your IP address for security, for fair play, to limit abuse (for example account farming), and to estimate your country.
+- Advertising information: if you choose to watch a rewarded ad, our ad partner may collect your device's advertising ID and related device and ad-interaction data under its own policy.
+
+What we do not collect
+
+- We do not collect your precise location, contacts, photos, microphone or camera data, or your SMS or call data.
+- We do not collect bank, card or payment details. The Game currently has no real-money purchases. If that changes, payments will be handled by Google Play and we will update this policy.
+- U10 has no open text chat between players.
+
+## 3. Why we use your data, and our legal basis
+
+- To provide the Game: create and secure your account, run matches and private rooms, keep balances, progress, friends and leaderboards. (Performance of our service and your consent.)
+- To keep the Game fair and safe: detect cheating, fraud, account farming and abuse, enforce our Terms, and handle reports. (Legitimate interests and legal obligations.)
+- To support you: answer emails and reports, and fix problems. (Performance of our service and legitimate interests.)
+- To improve the Game: understand crashes and errors, balance the economy, and plan features, mainly using aggregated or de-identified information. (Legitimate interests.)
+- To show optional rewarded ads and give you the reward. (Your consent, which you give by choosing to watch an ad.)
+- To meet legal duties and respond to lawful requests from authorities. (Legal obligation.)
+
+We do not sell your personal data. We do not use your data for automated decisions that have legal effects on you.
+
+## 4. Children and teenagers
+
+- U10 is not for children under 13, and we do not knowingly collect data from them. If we learn that we have collected data from a child under 13, we will delete it. If you believe a child under 13 is using the Game, email us.
+- Players aged 13 to 17 may play only with a parent or guardian's consent. Parents and guardians can contact us at any time to see, correct or delete their child's data or to withdraw consent.
+- We do not track or monitor the behaviour of players under 18 for advertising, and we configure advertising for players who are minors in line with applicable law, which means showing them only non-personalised or age-appropriate ads where the law requires it.
+
+## 5. Who we share data with
+
+- Google: for sign-in. Google processes your data under Google's Privacy Policy.
+- Facebook (Meta): for sign-in. Meta processes your data under Meta's Privacy Policy. You can remove the Game's access at any time in your Facebook settings (Settings, Apps and websites).
+- Our hosting and infrastructure providers: our game servers and database run on cloud infrastructure that stores and processes your data for us under contract and only on our instructions.
+- Advertising partners: only if you choose to watch a rewarded ad, to serve the ad and verify that you completed it. They act under their own privacy policies.
+- Other players: see section 2 for what is visible to other players.
+- Authorities and professional advisers: when the law requires it, to enforce our Terms, or to protect rights, safety and security.
+- A buyer or successor: if the Game or our business is sold or merged, your data may transfer to the new owner, who must follow this policy or tell you of any change.
+
+## 6. International transfers
+
+Our servers and our service providers may be in India or other countries. Where we transfer personal data to another country, we do so as the law allows and we take steps to keep your data protected.
+
+## 7. How long we keep your data
+
+- Account and progress data: for as long as your account is active.
+- Technical and security logs: for a limited period, normally up to 12 months.
+- Reports and support emails: for up to 24 months after the matter is closed, or longer if needed to deal with abuse or a legal claim.
+- Deleted accounts: your account and personal data are permanently deleted 30 days after you ask (see section 9). We keep only a deletion record with dates (no name, e-mail or Player ID), and the problem reports you sent without your identity.
+
+## 8. Your choices and rights
+
+You can:
+
+- see and correct your display name and avatar in the Game;
+- ask for a copy of the personal data we hold about you;
+- ask us to correct incomplete or inaccurate data;
+- ask us to delete your account and your personal data;
+- withdraw your consent at any time (this does not affect what we did before, and it may mean we can no longer provide the Game);
+- ask a question or make a complaint about how we handle your data, to our grievance contact in section 1; we aim to respond within 30 days;
+- nominate another person to exercise your rights in the event of your death or incapacity (as the Indian DPDP Act allows);
+- opt out of personalised ads by resetting or deleting your advertising ID in your Android settings (Settings, Privacy, Ads), and by simply not watching rewarded ads.
+
+To use these rights, email noobstudios.in@gmail.com from the address linked to your Google or Facebook account and include your Player ID (shown on your profile). We may need to verify your identity before we act. If you are not satisfied with our response, you may complain to the Data Protection Board of India or to your local data protection authority.
+
+## 9. Account deletion
+
+You can delete your account yourself in the game: Settings, Support, Delete Account. You confirm by typing your User ID (shown on the screen) and the word DELETE.
+
+- You are signed out at once and your account disappears from leaderboards and friend search.
+- Your account is permanently deleted 30 days after your request. If you sign in again before that date, the deletion is cancelled and your account is restored as it was.
+- After permanent deletion your Coins, progress, friends, profile and leaderboard entries are removed and cannot be restored.
+- What we keep: a deletion record with the dates only (no name, e-mail or Player ID) to show that the request was carried out, and any problem or freeze report you sent, without your identity. Server logs are removed within the period in section 7.
+
+If you cannot use the game, you can email noobstudios.in@gmail.com from the address linked to your Google or Facebook account, with your Player ID, and we will start the same process.
+
+## 10. Security
+
+We protect your data with access controls, server-side validation of gameplay, restricted write access to account and balance data, and limited access for our staff. No system is perfectly secure, so we cannot promise absolute security. If a data breach affects you, we will notify you and the authorities as the law requires.
+
+## 11. Third-party links and services
+
+The Game may show links or content from third parties (for example Google). Their privacy practices are their own, and we are not responsible for them.
+
+## 12. Changes to this policy
+
+We may update this policy. When we make a material change we will show the new policy in the Game and ask you to accept it again before you continue. The effective date at the top shows when it was last changed.
+
+## 13. Contact us
+
+GOB Interactive
+Email: noobstudios.in@gmail.com
