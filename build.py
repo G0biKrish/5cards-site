@@ -8,7 +8,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 EMAIL = "noobstudios.in@gmail.com"
 NAME = "5 Cards"
 STUDIO = "Noob Studios"
-SITE = "https://5cards-site.pages.dev"  # replaced by the real domain once one is attached
+SITE = "https://5cards.noobstudios.in"
 
 CSS = """
 :root{
