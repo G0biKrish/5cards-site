@@ -1,12 +1,12 @@
-# U10 Terms of Service
+# 5 Cards Terms of Service
 
 Effective date: 12 October 2026
 
-These Terms of Service ("Terms") are a binding agreement between you and GOB Interactive ("GOB Interactive", "we", "us", "our") for your use of the U10 mobile card game and the online services behind it (together, the "Game"). Please read them carefully. By tapping the consent box on the sign-in screen, or by installing or playing the Game, you confirm that you have read, understood and accepted these Terms and our Privacy Policy. If you do not agree, do not use the Game.
+These Terms of Service ("Terms") are a binding agreement between you and Noob Studios ("Noob Studios", "we", "us", "our") for your use of the 5 Cards mobile card game and the online services behind it (together, the "Game"). Please read them carefully. By tapping the consent box on the sign-in screen, or by installing or playing the Game, you confirm that you have read, understood and accepted these Terms and our Privacy Policy. If you do not agree, do not use the Game.
 
 ## 1. Who can play
 
-- You must be at least 13 years old to play U10. We ask for your birth year when you set up your profile and cannot let you in if you are under 13.
+- You must be at least 13 years old to play 5 Cards. We ask for your birth year when you set up your profile and cannot let you in if you are under 13.
 - If you are under 18 (or under the age of majority where you live), you may play only with the permission and supervision of a parent or legal guardian, who accepts these Terms on your behalf and is responsible for your use of the Game.
 - You must have the legal capacity to enter into this agreement, and you must not be barred from using the Game under any law that applies to you.
 - You must give us a true birth year. Giving a false one is a breach of these Terms.
@@ -18,10 +18,10 @@ These Terms of Service ("Terms") are a binding agreement between you and GOB Int
 - One person, one account. You may not sell, share, rent, transfer or buy accounts.
 - Your display name and avatar are visible to other players. They must follow section 6.
 
-## 3. What U10 is
+## 3. What 5 Cards is
 
-- U10 is a casual multiplayer card game for entertainment. You play against other people or against computer-controlled players in PLAY NOW tables, private rooms with friends, and PRACTICE.
-- U10 is a social game of skill and luck played for fun with virtual items only. There are no real-money stakes, no cash prizes, and nothing you can win or buy in the Game can be turned into money, goods or services outside the Game.
+- 5 Cards is a casual multiplayer card game for entertainment. You play against other people or against computer-controlled players in PLAY NOW tables, private rooms with friends, and PRACTICE.
+- 5 Cards is a social game of skill and luck played for fun with virtual items only. There are no real-money stakes, no cash prizes, and nothing you can win or buy in the Game can be turned into money, goods or services outside the Game.
 - Game rules, scoring, tables, entry fees, rewards and features are described in the Game and may be changed by us over time (see section 10).
 
 ## 4. Virtual items
@@ -69,7 +69,7 @@ We use automated and manual checks to keep the Game fair. Matches, results, bala
 
 ## 9. Our property
 
-- The Game, including its software, artwork, animation, card designs, user interface, sound, music, names, logos, and all related intellectual property, belongs to GOB Interactive or its licensors and is protected by law. Some components are used under open-source or third-party licences, listed under Credits in the Game.
+- The Game, including its software, artwork, animation, card designs, user interface, sound, music, names, logos, and all related intellectual property, belongs to Noob Studios or its licensors and is protected by law. Some components are used under open-source or third-party licences, listed under Credits in the Game.
 - We give you a limited, personal, non-exclusive, non-transferable, revocable licence to install and play the Game on devices you own or control, for personal non-commercial use and subject to these Terms.
 - You may not copy, modify, sell, rent, sublicense or create derivative works from the Game, except as the law allows despite this restriction.
 - You may share screenshots and videos of your play for personal, non-commercial purposes, as long as you do not misrepresent them or break these Terms.
@@ -90,7 +90,7 @@ We use automated and manual checks to keep the Game fair. Matches, results, bala
 
 ## 12. Limit of liability
 
-- To the fullest extent permitted by law, GOB Interactive, its owners, employees and partners are not liable for any indirect, incidental, special, consequential or punitive damages, or for loss of data, progress, Virtual Items, profits or goodwill, arising from your use of or inability to use the Game.
+- To the fullest extent permitted by law, Noob Studios, its owners, employees and partners are not liable for any indirect, incidental, special, consequential or punitive damages, or for loss of data, progress, Virtual Items, profits or goodwill, arising from your use of or inability to use the Game.
 - Our total liability to you for any claim related to the Game is limited to the greater of the amount you paid us for the Game in the 12 months before the claim (which may be nothing) or INR 1,000.
 - You agree to indemnify and hold us harmless against claims, losses and costs arising from your breach of these Terms or your misuse of the Game, to the extent permitted by law.
 - Nothing in these Terms limits liability that cannot be limited by law, such as liability for fraud or for death or personal injury caused by negligence.
@@ -110,7 +110,7 @@ We use automated and manual checks to keep the Game fair. Matches, results, bala
 
 ## 15. Contact
 
-GOB Interactive
+Noob Studios
 Email: noobstudios.in@gmail.com
 
 Questions about these Terms, requests, and complaints can be sent to this address. We aim to reply within 7 working days.
