@@ -4,6 +4,8 @@ import html
 import os
 import re
 
+import home as H
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 EMAIL = "noobstudios.in@gmail.com"
 NAME = "5 Cards"
@@ -268,10 +270,10 @@ code{background:#eef2fb;padding:2px 7px;border-radius:6px;font-size:.92em}
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">'
 
-NAV = [("/privacy/", "Privacy"), ("/terms/", "Terms"), ("/delete-account/", "Delete account"), ("/contact/", "Contact")]
+NAV = [("/#features", "Features"), ("/#gameplay", "Gameplay"), ("/#collect", "Collect"), ("/#faq", "FAQ"), ("/contact/", "Contact")]
 
 
-def shell(path, title, description, body):
+def shell(path, title, description, body, home=False):
     links = "".join('<a href="%s"%s>%s</a>' % (h, ' aria-current="page"' if h == path else "", t) for h, t in NAV)
     out = """<!doctype html>
 <html lang="en">
@@ -290,19 +292,20 @@ def shell(path, title, description, body):
 <meta property="og:image" content="%(site)s/assets/icon.png">
 <meta name="twitter:card" content="summary">
 %(fonts)s
-<style>%(css)s</style>
+<style>%(css)s%(hcss)s</style>
 </head>
-<body>
-<header class="site-header"><div class="container">
+<body class="%(bodycls)s">
+%(sprite)s<header class="site-header"><div class="container">
 <a class="brand" href="/" aria-label="%(name)s home"><img src="/assets/logo-5cards-sm.png" alt="" width="50" height="46">%(name)s</a>
+<button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><i></i></button>
 <nav class="nav" aria-label="Main">%(links)s<a class="cta" href="/#play">Play</a></nav>
 </div></header>
 %(body)s
 <footer class="site-footer"><div class="container">
 <div class="fgrid">
-<div><div class="logos"><img src="/assets/logo-5cards.webp" alt="%(name)s" width="70" height="64"><img src="/assets/logo-studio.webp" alt="%(studio)s" width="81" height="64"></div>
+<div><div class="appline"><img src="/assets/icon.png" alt="%(name)s app icon" width="56" height="56"><div class="logos" style="margin:0"><img src="/assets/logo-studio.webp" alt="%(studio)s" width="81" height="64"></div></div>
 <p style="margin:0;max-width:360px">%(name)s is a fast, friendly multiplayer card game for Android, made with love by %(studio)s.</p></div>
-<div><h4>Game</h4><a href="/#features">Features</a><a href="/#screens">Screenshots</a><a href="/#faq">FAQ</a><a href="/#play">Get the game</a></div>
+<div><h4>Game</h4><a href="/#features">Features</a><a href="/#gameplay">Gameplay</a><a href="/#collect">Collect</a><a href="/#faq">FAQ</a><a href="/#play">Get the game</a></div>
 <div><h4>Legal and support</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a><a href="/delete-account/">Delete your account</a><a href="mailto:%(email)s">%(email)s</a></div>
 </div>
 <div class="fine">&copy; 2026 %(studio)s. All rights reserved. %(name)s is a game of skill and luck played for fun: there is no gambling and no cash prizes, and coins cannot be turned into money. Coins can be earned in the game or bought with optional in-app purchases. Google Play is a trademark of Google LLC. Facebook is a trademark of Meta Platforms, Inc.</div>
@@ -314,10 +317,10 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 els.forEach(function(e){io.observe(e)});
 setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},4000);})();
 </script>
-</body>
+%(hjs)s</body>
 </html>
 """ % {"title": html.escape(title), "desc": html.escape(description), "url": SITE + path, "site": SITE, "fonts": FONTS, "css": CSS,
-       "name": NAME, "links": links, "body": body, "studio": STUDIO, "email": EMAIL}
+       "name": NAME, "links": links, "body": body, "bodycls": "home" if home else "doc-page", "sprite": H.SPRITE if home else "", "hcss": H.CSS if home else "", "hjs": ("<script>" + H.JS + "</script>") if home else "", "studio": STUDIO, "email": EMAIL}
     d = os.path.join(ROOT, path.strip("/"))
     os.makedirs(d, exist_ok=True)
     with open(os.path.join(d, "index.html"), "w", encoding="utf-8", newline="\n") as f:
@@ -419,132 +422,6 @@ def tile(icon, h, p):
             '<div class="ico">%s</div><h3>%s</h3><p>%s</p></div>') % (c, d, tilt, r, g, r, g, ICON[icon], h, p)
 
 
-PLAY_ICON = ('<svg viewBox="0 0 512 512" aria-hidden="true">'
-    '<path fill="#00d7fe" stroke="#00d7fe" stroke-width="22" stroke-linejoin="round" d="M60 40L290 256 60 472z"/>'
-    '<path fill="#00f076" stroke="#00f076" stroke-width="22" stroke-linejoin="round" d="M60 40L380 208 290 256z"/>'
-    '<path fill="#ff3a44" stroke="#ff3a44" stroke-width="22" stroke-linejoin="round" d="M60 472L380 304 290 256z"/>'
-    '<path fill="#ffc400" stroke="#ffc400" stroke-width="22" stroke-linejoin="round" d="M380 208L462 256 380 304 290 256z"/></svg>')
-
-SUITS = "".join('<span style="left:%d%%;top:%d%%;font-size:%dpx;transform:rotate(%ddeg)">%s</span>' % (x, y, s, r, g)
-                for x, y, s, r, g in [(4, 12, 56, -14, "&spades;"), (46, 6, 40, 12, "&hearts;"), (92, 18, 60, 18, "&clubs;"),
-                                      (30, 70, 48, -8, "&diams;"), (62, 82, 44, 10, "&spades;"), (8, 86, 36, 20, "&hearts;")])
-
-FAQS = [
-    ("Is 5 Cards free?", "Yes. 5 Cards is free to download and play. You earn coins by playing and from daily rewards, and you can also top up with optional in-app purchases if you like. You never need to buy anything to play."),
-    ("Is it gambling?", "No. 5 Cards is a party card game played for fun. There are no cash prizes and coins can never be turned into money, goods or services. Just bragging rights and good vibes."),
-    ("Can I play with my friends?", "Absolutely. Open a private room, share the room code and your friends can jump straight in. You can also add friends and invite them to a game."),
-    ("Which devices does it run on?", "5 Cards is built for Android phones. It is coming soon to Google Play."),
-    ("How do I sign in?", "Continue with Google or Facebook, or jump in as a guest. We never see your passwords."),
-    ("How do I delete my account?", "In the game go to Settings, Support, Delete Account. No game installed? Email us and we will take care of it. See the <a href=\"/delete-account/\">account deletion page</a>."),
-]
-
-HOME = """
-<section class="hero"><div class="suits" aria-hidden="true">%(suits)s</div><div class="container">
-<div class="hero-copy">
-<img class="hero-logo" src="/assets/logo-5cards.webp" alt="5 Cards" width="250" height="226">
-<span class="eyebrow">The multiplayer card game</span>
-<h1>Game night, <em>right in your pocket.</em></h1>
-<p class="lead">%(name)s is the fast, friendly card game made for friends, rivals and good vibes. Jump into a quick match, spin up a private room or climb the Trophy Road. Every round is a party.</p>
-<div class="actions" id="play">
-<a class="gp" href="/contact/" aria-label="Coming soon on Google Play">%(play)s<div><span>Coming soon on</span><b>Google Play</b></div></a>
-<a class="btn ghost" href="#screens">See the game</a>
-</div>
-<div class="chips"><span class="chip">Free to play</span><span class="chip">Android</span><span class="chip">No gambling, all vibes</span></div>
-</div>
-<div class="hero-art">%(menu)s%(table)s%(trophy)s</div>
-</div></section>
-
-<div class="ticker" aria-hidden="true"><div class="track"><span>Quick matches</span><i>&#9824;</i><span>Private rooms</span><i>&#9829;</i><span>Trophy Road</span><i>&#9827;</i><span>Card skins</span><i>&#9830;</i><span>Daily rewards</span><i>&#9824;</i><span>Quick matches</span><i>&#9824;</i><span>Private rooms</span><i>&#9829;</i><span>Trophy Road</span><i>&#9827;</i><span>Card skins</span><i>&#9830;</i><span>Daily rewards</span><i>&#9824;</i></div></div>
-
-<section id="features"><div class="container">
-<div class="section-head rv"><span class="kicker">Why you will love it</span><h2>Easy to learn. Impossible to put down.</h2><p>Short rounds, big laughs and always one more match to play.</p></div>
-<div class="fan">%(t1)s%(t2)s%(t3)s%(t4)s%(t5)s%(t6)s</div>
-</div></section>
-
-<section class="band" id="screens"><div class="container">
-<div class="section-head rv"><span class="kicker">Inside the game</span><h2>A table that feels alive</h2><p>Colourful, smooth and made for one-handed play on your phone.</p></div>
-
-<div class="row">
-<div class="rv"><span class="kicker">Play your way</span><h3>Jump in, or throw a party</h3>
-<p>Tap <b>Play Now</b> to find an opponent in seconds, open a <b>Private Room</b> and share the code with your crew, or warm up offline in <b>Practice</b>.</p>
-<ul class="ticks"><li>Quick online matches</li><li>Private rooms with room codes</li><li>Offline practice against computer players</li></ul></div>
-<div class="row-art rv">%(menu2)s</div>
-</div>
-
-<div class="row flip">
-<div class="rv"><span class="kicker">The table</span><h3>Draw, pair up, call your show</h3>
-<p>On your turn discard a card or a pair, then draw. Keep your hand value low and when you think you hold the lowest hand, call <b>Show</b>. Emotes and quick chat keep the table friendly, with no open text chat.</p>
-<ul class="ticks"><li>Clear turn timer and round tracker</li><li>Playful emotes and quick chat</li><li>Built-in tutorial for new players</li></ul></div>
-<div class="row-art rv">%(table2)s</div>
-</div>
-
-<div class="row">
-<div class="rv"><span class="kicker">Climb the ranks</span><h3>Trophies, tiers and bragging rights</h3>
-<p>Every win earns trophies. Rise from Rookie to Challenger to Ace on the Trophy Road, grab a reward at every step and see how you stack up on the global and friends leaderboards.</p>
-<ul class="ticks"><li>Seasonal Trophy Road with rewards</li><li>Global and friends leaderboards</li><li>Daily challenges and bonuses</li></ul></div>
-<div class="row-art duo rv">%(trophy2)s%(lb)s</div>
-</div>
-
-<div class="row flip">
-<div class="rv"><span class="kicker">Make it yours</span><h3>Show off your style</h3>
-<p>Unlock striking card skins, emotes and quick chat lines in the shop. Earn coins by playing and from free daily rewards like Lucky Pick and Scratch Your Luck, or top up with optional in-app coin packs.</p>
-<ul class="ticks"><li>Dozens of card skins to collect</li><li>Free daily coins</li><li>Optional in-app coin packs</li></ul></div>
-<div class="row-art rv">%(shop)s</div>
-</div>
-</div></section>
-
-<section><div class="container">
-<div class="section-head rv"><span class="kicker">How a round works</span><h2>Learn it in a minute</h2><p>The in-game tutorial walks you through it with a real table and real cards.</p></div>
-<div class="steps">
-<div class="step rv"><h3>Get your five cards</h3><p>Everyone is dealt a hand of five. Your goal is to end the round with the lowest hand value.</p></div>
-<div class="step rv"><h3>Discard and draw</h3><p>On your turn, discard one card or a matching pair, then draw a new card to improve your hand.</p></div>
-<div class="step rv"><h3>Call your show</h3><p>Think yours is the lowest hand? Call <b>Show</b>: if you are right you score zero, but a wrong call costs you a penalty. The highest score each round is knocked out, and the last player standing wins.</p></div>
-</div></div></section>
-
-<section class="party"><div class="container">
-<span class="eyebrow">Private rooms</span>
-<h2>Who is coming to game night?</h2>
-<p>Create a room, share the code and get everyone around the same table, wherever they are. Bring the snacks, we will bring the cards.</p>
-<div class="chips"><span class="chip">Room codes</span><span class="chip">Friends list</span><span class="chip">Emotes and quick chat</span></div>
-</div></section>
-
-<section id="faq"><div class="container">
-<div class="section-head rv"><span class="kicker">Good to know</span><h2>Questions, answered</h2></div>
-<div class="faq rv">%(faq)s</div>
-</div></section>
-
-<section class="studio"><div class="container">
-<img src="/assets/logo-studio.webp" alt="%(studio)s logo" width="260" height="205" loading="lazy">
-<div><span class="kicker">The studio</span><h2>Made by %(studio)s</h2>
-<p>We are an indie studio that loves games you can pick up in seconds and share with friends. %(name)s is built with care for the casual card table: quick, colourful and full of good vibes.</p>
-<p>Say hello at <a href="mailto:%(email)s">%(email)s</a>.</p></div>
-</div></section>
-
-<section class="cta-band"><div class="container">
-<img src="/assets/logo-5cards.webp" alt="%(name)s logo" width="190" height="172" loading="lazy">
-<h2>Ready for your first match?</h2>
-<p>%(name)s is coming to Google Play. Questions in the meantime? We would love to hear from you.</p>
-<div class="actions" style="justify-content:center"><a class="gp" href="/contact/" aria-label="Coming soon on Google Play">%(play)s<div><span>Coming soon on</span><b>Google Play</b></div></a><a class="btn ghost" href="/contact/">Get in touch</a><a class="btn ghost" href="/privacy/">Read our privacy policy</a></div>
-</div></section>
-""" % {
-    "name": NAME, "studio": STUDIO, "email": EMAIL, "suits": SUITS, "play": PLAY_ICON,
-    "menu": phone("menu", "5 Cards main menu with Play Now, Private Room and Practice", "l", eager=True),
-    "table": phone("table", "A 5 Cards table with four players", "c", eager=True),
-    "trophy": phone("trophy", "The Trophy Road with tiers from Rookie to Ace", "r", eager=True),
-    "menu2": phone("menu", "5 Cards main menu with Play Now, Private Room and Practice"),
-    "table2": phone("table", "A 5 Cards table with four players"),
-    "trophy2": phone("trophy", "The Trophy Road with tiers from Rookie to Ace"),
-    "lb": phone("leaderboard", "The global leaderboard with the top three players"),
-    "shop": phone("shop", "The shop with card skins"),
-    "t1": tile("bolt", "Quick matches", "Find an opponent in seconds and play a round of %s on the go." % NAME),
-    "t2": tile("users", "Private rooms", "Share a room code and play with friends, wherever they are."),
-    "t3": tile("trophy", "Trophy Road", "Win to earn trophies, rise through the tiers and claim rewards."),
-    "t4": tile("coin", "Coins, your way", "Earn coins by playing and from daily rewards, or top up with optional in-app purchases."),
-    "t5": tile("cards", "Card skins", "Collect colourful decks, emotes and quick chat lines to show off your style."),
-    "t6": tile("heart", "Good vibes only", "No open chat, no gambling and friendly emotes. You can delete your account in the game."),
-    "faq": "".join("<details><summary>%s</summary><p>%s</p></details>" % (q, a) for q, a in FAQS),
-}
-
 DELETE = """<p class="meta">How to delete your %(n)s account and the data we hold about you.</p>
 <div class="cards2">
 <div class="tile"><h3>In the game</h3><p>The fastest way. Takes under a minute and needs no email.</p></div>
@@ -580,7 +457,7 @@ CONTACT = """<p class="meta">Support, feedback and privacy requests.</p>
 
 shell("/", "5 Cards - the multiplayer card game | Noob Studios",
       "5 Cards is a fast, friendly multiplayer card game for Android by Noob Studios. Quick matches, private rooms for game night, the Trophy Road and card skins.",
-      HOME)
+      H.home_body(), home=True)
 
 eff, body = legal("privacy.txt")
 doc_page("/privacy/", "Privacy Policy | 5 Cards", "How 5 Cards by Noob Studios collects, uses and protects your personal data.",
