@@ -55,8 +55,8 @@ We do not sell your personal data. We do not use your data for automated decisio
 
 ## 4. Children and teenagers
 
-- 5 Cards is not for children under 13, and we do not knowingly collect data from them. If we learn that we have collected data from a child under 13, we will delete it. If you believe a child under 13 is using the Game, email us.
-- Players aged 13 to 17 may play only with a parent or guardian's consent. Parents and guardians can contact us at any time to see, correct or delete their child's data or to withdraw consent.
+- 5 Cards is not for children under 16, and we do not knowingly collect data from them. If we learn that we have collected data from someone under 16, we will delete it. If you believe someone under 16 is using the Game, email us.
+- Players aged 16 and 17 may play with a parent or guardian's consent where the law requires it. Parents and guardians can contact us at any time to see, correct or delete their child's data or to withdraw consent.
 - We do not track or monitor the behaviour of players under 18 for advertising, and we configure advertising for players who are minors in line with applicable law, which means showing them only non-personalised or age-appropriate ads where the law requires it.
 
 ## 5. Who we share data with
