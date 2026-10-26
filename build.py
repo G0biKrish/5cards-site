@@ -38,11 +38,11 @@ h1,h2,h3{font-family:"Poppins","Inter",system-ui,sans-serif;line-height:1.12;let
 @media(max-width:860px){.nav a:not(.cta){display:none}}
 
 /* phone frame: the screen keeps the exact 450:1000 shape of the screenshot, so nothing is cropped or stretched */
-.phone{position:relative;padding:10px;border-radius:44px;background:linear-gradient(150deg,#3b4d82 0%,#111a38 45%,#070c1c 100%);box-shadow:0 34px 70px rgba(3,8,30,.5),inset 0 0 0 1.5px rgba(255,255,255,.16)}
-.phone:before,.phone:after{content:"";position:absolute;width:3px;border-radius:2px;background:#222c4d}
-.phone:before{left:-3px;top:18%;height:7%}
-.phone:after{right:-3px;top:24%;height:12%}
-.phone .screen{border-radius:35px;overflow:hidden;aspect-ratio:450/1000;background:#000}
+.phone{position:relative;container-type:inline-size;border-radius:13% / 5.85%;background:linear-gradient(150deg,#3b4d82 0%,#111a38 45%,#070c1c 100%);box-shadow:0 34px 70px rgba(3,8,30,.5),inset 0 0 0 1.5px rgba(255,255,255,.16)}
+.phone:before,.phone:after{content:"";position:absolute;width:max(2px,1.1cqw);border-radius:2px;background:#222c4d}
+.phone:before{left:max(-2px,-1.1cqw);top:18%;height:7%}
+.phone:after{right:max(-2px,-1.1cqw);top:24%;height:12%}
+.phone .screen{margin:3.4cqw;border-radius:10cqw;overflow:hidden;aspect-ratio:450/1000;background:#000}
 .phone .screen img{width:100%;height:100%;object-fit:cover}
 
 /* hero */
@@ -259,7 +259,6 @@ code{background:#eef2fb;padding:2px 7px;border-radius:6px;font-size:.92em}
 .step:nth-child(3):after{content:"\\2666";color:rgba(224,36,94,.1)}
 .row-art .phone{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .row-art:hover .phone{transform:translateY(-8px) rotate(-1.5deg)}
-.row-art.duo .phone:nth-child(2){margin-top:44px}
 .faq details{transition:box-shadow .25s,border-color .25s}
 .faq details:hover{border-color:#c5d3f5}
 .faq details[open]{box-shadow:0 12px 30px rgba(8,21,56,.08)}
