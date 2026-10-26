@@ -21,7 +21,7 @@ These Terms of Service ("Terms") are a binding agreement between you and Noob St
 ## 3. What 5 Cards is
 
 - 5 Cards is a casual multiplayer card game for entertainment. You play against other people or against computer-controlled players in PLAY NOW tables, private rooms with friends, and PRACTICE.
-- 5 Cards is a social game of skill and luck played for fun with virtual items only. There are no real-money stakes, no cash prizes, and nothing you can win or buy in the Game can be turned into money, goods or services outside the Game.
+- 5 Cards is a social game of skill and luck played for fun with virtual items only. There are no real-money stakes, no cash prizes, and nothing you can win or buy in the Game can be turned into money, goods or services outside the Game. It is built for fun, parties and good vibes with friends, and it is not a gambling game.
 - Game rules, scoring, tables, entry fees, rewards and features are described in the Game and may be changed by us over time (see section 10).
 
 ## 4. Virtual items
@@ -29,10 +29,14 @@ These Terms of Service ("Terms") are a binding agreement between you and Noob St
 - The Game uses virtual items such as Coins, XP, levels, level rewards, daily login rewards, Lucky Hand rewards, and cosmetic items. We call these "Virtual Items".
 - Virtual Items have no monetary value. They are not property, they are not a currency or e-money, and they are not redeemable for cash or anything of value outside the Game.
 - We give you a limited, personal, non-exclusive, non-transferable, revocable licence to use Virtual Items inside the Game only. We own all Virtual Items; your balance is a record in our system.
-- You may not buy, sell, trade, gift, transfer or otherwise exchange Virtual Items or accounts for money or anything of value, and you may not offer to do so. You may not use Coins for gambling of any kind.
+- Apart from buying Coins from us in the Game as described below, you may not buy, sell, trade, gift, transfer or otherwise exchange Virtual Items or accounts for money or anything of value, and you may not offer to do so. You may not use Coins for gambling of any kind.
 - Coins you spend as a table entry fee or a private room fee are used up for that match or room according to the rules shown in the Game before you confirm. Where the Game says a fee is returned (for example when a room is closed before it starts), it is returned to your balance.
 - We may add, change, rebalance, reset or remove Virtual Items, prices, fees and rewards, for example to fix errors, stop abuse, keep the Game fair, or because a feature changes. Where practical we will tell you in advance for material changes.
-- If we introduce purchases with real money in the future, we will update these Terms and show the price, taxes and refund rules before you buy. Purchases made through Google Play are also subject to Google Play's own terms and refund policy.
+- Optional in-app purchases: you can buy packs of Coins with real money through Google Play. Buying is always optional, and every feature of the Game can also be enjoyed with Coins earned by playing. The price, including applicable taxes, is shown by Google Play before you confirm. Payment is taken by Google Play, not by us.
+- Coins you buy are Virtual Items. They are delivered to your account after Google Play confirms the payment and we have checked the purchase. They have no cash value, cannot be refunded to money by us, and cannot be withdrawn, transferred or exchanged. If Coins do not arrive, contact us with your Google Play order ID and we will fix it.
+- Refunds and cancellations of purchases are handled by Google Play under its own terms and refund policy, and your rights under applicable consumer law are not affected. If Google Play refunds or reverses a purchase, we may remove the Coins from that purchase, which can leave your balance lower or at zero.
+- If your account is closed for breaking these Terms, unused purchased Coins may be lost, except where the law requires otherwise.
+- If you are under 18, you may buy Coins only with the permission of a parent or guardian who controls the payment method.
 
 ## 5. Rewarded ads
 

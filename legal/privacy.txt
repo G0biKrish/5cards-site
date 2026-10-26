@@ -32,12 +32,13 @@ Technical information collected automatically
 
 - Device and app information: app version, operating system and version, device model, language, and the time zone and settings that the Game needs to run.
 - Connection information: IP address, connection and session logs, error and crash information, and timestamps. We use your IP address for security, for fair play, to limit abuse (for example account farming), and to estimate your country.
+- Purchase information: when you buy Coins in the Game, Google Play tells us that the purchase happened. We receive the product bought, the order ID, the purchase time and a purchase token, and we check them with Google before adding the Coins to your balance. We keep these records to deliver your Coins, to handle refunds, failed purchases and disputes, to prevent fraud, and to meet tax and accounting duties. We do not receive your payment method details.
 - Advertising information: if you choose to watch a rewarded ad, our ad partner may collect your device's advertising ID and related device and ad-interaction data under its own policy.
 
 What we do not collect
 
 - We do not collect your precise location, contacts, photos, microphone or camera data, or your SMS or call data.
-- We do not collect bank, card or payment details. The Game currently has no real-money purchases. If that changes, payments will be handled by Google Play and we will update this policy.
+- We do not collect your card, bank, UPI or other payment details. Payments for in-app purchases are taken by Google Play, which handles them under its own terms and privacy policy.
 - 5 Cards has no open text chat between players.
 
 ## 3. Why we use your data, and our legal basis
@@ -46,6 +47,7 @@ What we do not collect
 - To keep the Game fair and safe: detect cheating, fraud, account farming and abuse, enforce our Terms, and handle reports. (Legitimate interests and legal obligations.)
 - To support you: answer emails and reports, and fix problems. (Performance of our service and legitimate interests.)
 - To improve the Game: understand crashes and errors, balance the economy, and plan features, mainly using aggregated or de-identified information. (Legitimate interests.)
+- To process and verify your optional in-app purchases, deliver Coins, and handle refunds and disputes. (Performance of our service, legal obligations and legitimate interests.)
 - To show optional rewarded ads and give you the reward. (Your consent, which you give by choosing to watch an ad.)
 - To meet legal duties and respond to lawful requests from authorities. (Legal obligation.)
 
@@ -59,6 +61,7 @@ We do not sell your personal data. We do not use your data for automated decisio
 
 ## 5. Who we share data with
 
+- Google (Google Play): for sign-in and for in-app purchases. Google processes your data under Google's Privacy Policy and the Google Play terms.
 - Google: for sign-in. Google processes your data under Google's Privacy Policy.
 - Facebook (Meta): for sign-in. Meta processes your data under Meta's Privacy Policy. You can remove the Game's access at any time in your Facebook settings (Settings, Apps and websites).
 - Our hosting and infrastructure providers: our game servers and database run on cloud infrastructure that stores and processes your data for us under contract and only on our instructions.
