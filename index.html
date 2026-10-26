@@ -6,6 +6,7 @@
 <title>5 Cards - the multiplayer card game | Noob Studios</title>
 <meta name="description" content="5 Cards is a fast, friendly multiplayer card game for Android by Noob Studios. Quick matches, private rooms for game night, the Trophy Road and card skins.">
 <meta name="theme-color" content="#081538">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="canonical" href="https://5cards.noobstudios.in/">
 <link rel="icon" href="/assets/favicon.png">
 <meta property="og:type" content="website">
@@ -197,6 +198,78 @@ code{background:#eef2fb;padding:2px 7px;border-radius:6px;font-size:.92em}
 .site-footer .logos img{height:64px;width:auto}
 .fine{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:22px;font-size:13.5px;color:#7f93c8;line-height:1.6}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+
+/* ---- motion + card styling ---- */
+.hero-art .c{--r:0deg}.hero-art .l{--r:-8deg}.hero-art .r{--r:8deg}
+.hero-art .l,.hero-art .r{transform:rotate(var(--r))}
+.hero-art .phone{animation:deal 1s cubic-bezier(.2,.9,.25,1) both,bob 7s ease-in-out 1.2s infinite}
+.hero-art .c{animation-delay:.1s,1.2s}.hero-art .l{animation-delay:.35s,2s}.hero-art .r{animation-delay:.55s,2.8s}
+@keyframes deal{from{opacity:0;transform:translateY(90px) scale(.86) rotate(0deg)}to{opacity:1;transform:translateY(0) scale(1) rotate(var(--r))}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-12px) rotate(var(--r))}}
+.hero-copy>*{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+.hero-copy>:nth-child(2){animation-delay:.08s}.hero-copy>:nth-child(3){animation-delay:.16s}.hero-copy>:nth-child(4){animation-delay:.24s}.hero-copy>:nth-child(5){animation-delay:.32s}.hero-copy>:nth-child(6){animation-delay:.4s}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.suits span{animation:drift 9s ease-in-out infinite}
+.suits span:nth-child(2n){animation-duration:12s;animation-direction:reverse}
+@keyframes drift{0%,100%{translate:0 0}50%{translate:0 -16px}}
+.js .rv{opacity:0}
+.js .rv.in{opacity:1;animation:rise .8s cubic-bezier(.2,.8,.2,1) var(--d,0s) backwards}
+.js .pcard.rv.in{animation:dealcard .85s cubic-bezier(.2,.85,.25,1) var(--d,0s) backwards}
+@keyframes dealcard{from{opacity:0;transform:translateY(70px) rotate(var(--r0,-7deg)) scale(.9)}to{opacity:1;transform:none}}
+
+.ticker{overflow:hidden;padding:15px 0}
+.ticker .track{display:flex;gap:30px;width:max-content;animation:marquee 32s linear infinite}
+.ticker .track span,.ticker .track i{white-space:nowrap}
+.ticker:hover .track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* store badge */
+.gp{display:inline-flex;align-items:center;gap:13px;background:#000;color:#fff;text-decoration:none;border:1.5px solid #a6a6a6;border-radius:13px;padding:9px 22px 9px 16px;transition:transform .2s,box-shadow .2s,border-color .2s;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.gp:hover{transform:translateY(-3px) scale(1.02);border-color:#fff;box-shadow:0 16px 34px rgba(0,0,0,.45)}
+.gp svg{width:34px;height:34px;flex:none}
+.gp span{display:block;text-align:left;font:600 11px/1.1 "Inter",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#e8e8e8}
+.gp b{display:block;font:600 24px/1.1 "Poppins",sans-serif;letter-spacing:-.01em;margin-top:2px}
+.actions{align-items:center}
+
+/* playing-card features */
+.fan{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 26px}
+@media(max-width:940px){.fan{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.fan{grid-template-columns:1fr;max-width:360px;margin:0 auto}}
+.pcard{--c:#101b3a;position:relative;min-height:330px;padding:62px 28px 56px;text-align:center;background:linear-gradient(165deg,#fff 0%,#f4f7ff 100%);border-radius:22px;border:1px solid #d9e1f5;box-shadow:0 2px 0 #fff inset,0 14px 34px rgba(8,21,56,.1);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;overflow:hidden}
+.pcard:before{content:"";position:absolute;inset:9px;border:1.5px solid rgba(16,27,58,.09);border-radius:15px;pointer-events:none}
+.pcard:after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-18deg);transition:left .7s ease;pointer-events:none}
+.pcard:hover{transform:translateY(-12px) rotate(var(--tilt,-1.5deg));box-shadow:0 30px 56px rgba(8,21,56,.2)}
+.pcard:hover:after{left:130%}
+.pcard:nth-child(2n){--tilt:1.5deg}
+.pcard.red{--c:#e0245e}.pcard.blk{--c:#101b3a}
+.pcard .idx{position:absolute;display:flex;flex-direction:column;align-items:center;line-height:1;font:800 22px "Poppins",sans-serif;color:var(--c);z-index:1}
+.pcard .idx i{font-style:normal;font-size:20px;margin-top:3px}
+.pcard .idx.tl{top:20px;left:22px}
+.pcard .idx.br{bottom:20px;right:22px;transform:rotate(180deg)}
+.pcard .ico{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;background:linear-gradient(145deg,var(--blue),var(--sky));box-shadow:0 12px 24px rgba(29,78,216,.28);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.pcard:hover .ico{transform:scale(1.12) rotate(-6deg)}
+.pcard:nth-child(2) .ico{background:linear-gradient(145deg,var(--violet),#b49bff);box-shadow:0 12px 24px rgba(124,92,255,.3)}
+.pcard:nth-child(3) .ico{background:linear-gradient(145deg,#ff9a3d,var(--gold));box-shadow:0 12px 24px rgba(255,154,61,.3)}
+.pcard:nth-child(4) .ico{background:linear-gradient(145deg,var(--mint),#7df2cb);box-shadow:0 12px 24px rgba(46,230,166,.3)}
+.pcard:nth-child(5) .ico{background:linear-gradient(145deg,var(--pink),#ff9ab9);box-shadow:0 12px 24px rgba(255,93,143,.3)}
+.pcard:nth-child(6) .ico{background:linear-gradient(145deg,#ef4444,#ff8a8a);box-shadow:0 12px 24px rgba(239,68,68,.3)}
+.pcard .ico svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pcard h3{font-size:21px;margin:0 0 10px}
+.pcard p{margin:0;color:var(--muted);font-size:16px}
+
+.step{transition:transform .3s,box-shadow .3s;overflow:visible}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.step:after{content:"\2660";position:absolute;right:20px;bottom:10px;font-size:34px;color:rgba(16,27,58,.07)}
+.step:nth-child(2):after{content:"\2665";color:rgba(224,36,94,.1)}
+.step:nth-child(3):after{content:"\2666";color:rgba(224,36,94,.1)}
+.row-art .phone{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.row-art:hover .phone{transform:translateY(-8px) rotate(-1.5deg)}
+.row-art.duo .phone:nth-child(2){margin-top:44px}
+.faq details{transition:box-shadow .25s,border-color .25s}
+.faq details:hover{border-color:#c5d3f5}
+.faq details[open]{box-shadow:0 12px 30px rgba(8,21,56,.08)}
+.faq details[open] p{animation:rise .35s ease both}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1}}
 </style>
 </head>
 <body>
@@ -212,7 +285,7 @@ code{background:#eef2fb;padding:2px 7px;border-radius:6px;font-size:.92em}
 <h1>Game night, <em>right in your pocket.</em></h1>
 <p class="lead">5 Cards is the fast, friendly card game made for friends, rivals and good vibes. Jump into a quick match, spin up a private room or climb the Trophy Road. Every round is a party.</p>
 <div class="actions" id="play">
-<a class="btn gold" href="/contact/"><svg viewBox="0 0 24 24"><path d="M4 3.5v17a1 1 0 0 0 1.5.9l15-8.5a1 1 0 0 0 0-1.8l-15-8.5A1 1 0 0 0 4 3.5z"/></svg><span><small>Coming soon to</small>Google Play</span></a>
+<a class="gp" href="/contact/" aria-label="Coming soon on Google Play"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d7fe" stroke="#00d7fe" stroke-width="22" stroke-linejoin="round" d="M60 40L290 256 60 472z"/><path fill="#00f076" stroke="#00f076" stroke-width="22" stroke-linejoin="round" d="M60 40L380 208 290 256z"/><path fill="#ff3a44" stroke="#ff3a44" stroke-width="22" stroke-linejoin="round" d="M60 472L380 304 290 256z"/><path fill="#ffc400" stroke="#ffc400" stroke-width="22" stroke-linejoin="round" d="M380 208L462 256 380 304 290 256z"/></svg><div><span>Coming soon on</span><b>Google Play</b></div></a>
 <a class="btn ghost" href="#screens">See the game</a>
 </div>
 <div class="chips"><span class="chip">Free to play</span><span class="chip">Android</span><span class="chip">No gambling, all vibes</span></div>
@@ -220,51 +293,51 @@ code{background:#eef2fb;padding:2px 7px;border-radius:6px;font-size:.92em}
 <div class="hero-art"><div class="phone l"><div class="screen"><img src="/assets/shot-menu.webp" alt="5 Cards main menu with Play Now, Private Room and Practice" width="450" height="1000"></div></div><div class="phone c"><div class="screen"><img src="/assets/shot-table.webp" alt="A 5 Cards table with four players" width="450" height="1000"></div></div><div class="phone r"><div class="screen"><img src="/assets/shot-trophy.webp" alt="The Trophy Road with tiers from Rookie to Ace" width="450" height="1000"></div></div></div>
 </div></section>
 
-<div class="ticker"><div class="container"><span>Quick matches</span><i>&#9824;</i><span>Private rooms</span><i>&#9829;</i><span>Trophy Road</span><i>&#9827;</i><span>Card skins</span><i>&#9830;</i><span>Daily rewards</span></div></div>
+<div class="ticker" aria-hidden="true"><div class="track"><span>Quick matches</span><i>&#9824;</i><span>Private rooms</span><i>&#9829;</i><span>Trophy Road</span><i>&#9827;</i><span>Card skins</span><i>&#9830;</i><span>Daily rewards</span><i>&#9824;</i><span>Quick matches</span><i>&#9824;</i><span>Private rooms</span><i>&#9829;</i><span>Trophy Road</span><i>&#9827;</i><span>Card skins</span><i>&#9830;</i><span>Daily rewards</span><i>&#9824;</i></div></div>
 
 <section id="features"><div class="container">
-<div class="section-head"><span class="kicker">Why you will love it</span><h2>Easy to learn. Impossible to put down.</h2><p>Short rounds, big laughs and always one more match to play.</p></div>
-<div class="grid3"><div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Quick matches</h3><p>Find an opponent in seconds and play a round of 5 Cards on the go.</p></div><div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3>Private rooms</h3><p>Share a room code and play with friends, wherever they are.</p></div><div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div><h3>Trophy Road</h3><p>Win to earn trophies, rise through the tiers and claim rewards.</p></div><div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg></div><h3>Coins, your way</h3><p>Earn coins by playing and from daily rewards, or top up with optional in-app purchases.</p></div><div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="11" height="15" rx="2"/><path d="M8 6l2-3 9 2-3 14-2 .5"/></svg></div><h3>Card skins</h3><p>Collect colourful decks, emotes and quick chat lines to show off your style.</p></div><div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1l8.8 8.8 8.8-8.8a5 5 0 0 0 0-7.1z"/></svg></div><h3>Good vibes only</h3><p>No open chat, no gambling and friendly emotes. You can delete your account in the game.</p></div></div>
+<div class="section-head rv"><span class="kicker">Why you will love it</span><h2>Easy to learn. Impossible to put down.</h2><p>Short rounds, big laughs and always one more match to play.</p></div>
+<div class="fan"><div class="pcard blk rv" style="--d:0.00s;--r0:-8deg"><div class="idx tl">A<i>&#9824;</i></div><div class="idx br">A<i>&#9824;</i></div><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Quick matches</h3><p>Find an opponent in seconds and play a round of 5 Cards on the go.</p></div><div class="pcard red rv" style="--d:0.12s;--r0:0deg"><div class="idx tl">K<i>&#9829;</i></div><div class="idx br">K<i>&#9829;</i></div><div class="ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3>Private rooms</h3><p>Share a room code and play with friends, wherever they are.</p></div><div class="pcard blk rv" style="--d:0.24s;--r0:8deg"><div class="idx tl">Q<i>&#9827;</i></div><div class="idx br">Q<i>&#9827;</i></div><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div><h3>Trophy Road</h3><p>Win to earn trophies, rise through the tiers and claim rewards.</p></div><div class="pcard red rv" style="--d:0.00s;--r0:-8deg"><div class="idx tl">J<i>&#9830;</i></div><div class="idx br">J<i>&#9830;</i></div><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg></div><h3>Coins, your way</h3><p>Earn coins by playing and from daily rewards, or top up with optional in-app purchases.</p></div><div class="pcard blk rv" style="--d:0.12s;--r0:0deg"><div class="idx tl">10<i>&#9824;</i></div><div class="idx br">10<i>&#9824;</i></div><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="11" height="15" rx="2"/><path d="M8 6l2-3 9 2-3 14-2 .5"/></svg></div><h3>Card skins</h3><p>Collect colourful decks, emotes and quick chat lines to show off your style.</p></div><div class="pcard red rv" style="--d:0.24s;--r0:8deg"><div class="idx tl">9<i>&#9829;</i></div><div class="idx br">9<i>&#9829;</i></div><div class="ico"><svg viewBox="0 0 24 24"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1l8.8 8.8 8.8-8.8a5 5 0 0 0 0-7.1z"/></svg></div><h3>Good vibes only</h3><p>No open chat, no gambling and friendly emotes. You can delete your account in the game.</p></div></div>
 </div></section>
 
 <section class="band" id="screens"><div class="container">
-<div class="section-head"><span class="kicker">Inside the game</span><h2>A table that feels alive</h2><p>Colourful, smooth and made for one-handed play on your phone.</p></div>
+<div class="section-head rv"><span class="kicker">Inside the game</span><h2>A table that feels alive</h2><p>Colourful, smooth and made for one-handed play on your phone.</p></div>
 
 <div class="row">
-<div><span class="kicker">Play your way</span><h3>Jump in, or throw a party</h3>
+<div class="rv"><span class="kicker">Play your way</span><h3>Jump in, or throw a party</h3>
 <p>Tap <b>Play Now</b> to find an opponent in seconds, open a <b>Private Room</b> and share the code with your crew, or warm up offline in <b>Practice</b>.</p>
 <ul class="ticks"><li>Quick online matches</li><li>Private rooms with room codes</li><li>Offline practice against computer players</li></ul></div>
-<div class="row-art"><div class="phone "><div class="screen"><img src="/assets/shot-menu.webp" alt="5 Cards main menu with Play Now, Private Room and Practice" width="450" height="1000" loading="lazy"></div></div></div>
+<div class="row-art rv"><div class="phone "><div class="screen"><img src="/assets/shot-menu.webp" alt="5 Cards main menu with Play Now, Private Room and Practice" width="450" height="1000" loading="lazy"></div></div></div>
 </div>
 
 <div class="row flip">
-<div><span class="kicker">The table</span><h3>Draw, pair up, call your show</h3>
+<div class="rv"><span class="kicker">The table</span><h3>Draw, pair up, call your show</h3>
 <p>On your turn discard a card or a pair, then draw. Keep your hand value low and when you think you hold the lowest hand, call <b>Show</b>. Emotes and quick chat keep the table friendly, with no open text chat.</p>
 <ul class="ticks"><li>Clear turn timer and round tracker</li><li>Playful emotes and quick chat</li><li>Built-in tutorial for new players</li></ul></div>
-<div class="row-art"><div class="phone "><div class="screen"><img src="/assets/shot-table.webp" alt="A 5 Cards table with four players" width="450" height="1000" loading="lazy"></div></div></div>
+<div class="row-art rv"><div class="phone "><div class="screen"><img src="/assets/shot-table.webp" alt="A 5 Cards table with four players" width="450" height="1000" loading="lazy"></div></div></div>
 </div>
 
 <div class="row">
-<div><span class="kicker">Climb the ranks</span><h3>Trophies, tiers and bragging rights</h3>
+<div class="rv"><span class="kicker">Climb the ranks</span><h3>Trophies, tiers and bragging rights</h3>
 <p>Every win earns trophies. Rise from Rookie to Challenger to Ace on the Trophy Road, grab a reward at every step and see how you stack up on the global and friends leaderboards.</p>
 <ul class="ticks"><li>Seasonal Trophy Road with rewards</li><li>Global and friends leaderboards</li><li>Daily challenges and bonuses</li></ul></div>
-<div class="row-art duo"><div class="phone "><div class="screen"><img src="/assets/shot-trophy.webp" alt="The Trophy Road with tiers from Rookie to Ace" width="450" height="1000" loading="lazy"></div></div><div class="phone "><div class="screen"><img src="/assets/shot-leaderboard.webp" alt="The global leaderboard with the top three players" width="450" height="1000" loading="lazy"></div></div></div>
+<div class="row-art duo rv"><div class="phone "><div class="screen"><img src="/assets/shot-trophy.webp" alt="The Trophy Road with tiers from Rookie to Ace" width="450" height="1000" loading="lazy"></div></div><div class="phone "><div class="screen"><img src="/assets/shot-leaderboard.webp" alt="The global leaderboard with the top three players" width="450" height="1000" loading="lazy"></div></div></div>
 </div>
 
 <div class="row flip">
-<div><span class="kicker">Make it yours</span><h3>Show off your style</h3>
+<div class="rv"><span class="kicker">Make it yours</span><h3>Show off your style</h3>
 <p>Unlock striking card skins, emotes and quick chat lines in the shop. Earn coins by playing and from free daily rewards like Lucky Pick and Scratch Your Luck, or top up with optional in-app coin packs.</p>
 <ul class="ticks"><li>Dozens of card skins to collect</li><li>Free daily coins</li><li>Optional in-app coin packs</li></ul></div>
-<div class="row-art"><div class="phone "><div class="screen"><img src="/assets/shot-shop.webp" alt="The shop with card skins" width="450" height="1000" loading="lazy"></div></div></div>
+<div class="row-art rv"><div class="phone "><div class="screen"><img src="/assets/shot-shop.webp" alt="The shop with card skins" width="450" height="1000" loading="lazy"></div></div></div>
 </div>
 </div></section>
 
 <section><div class="container">
-<div class="section-head"><span class="kicker">How a round works</span><h2>Learn it in a minute</h2><p>The in-game tutorial walks you through it with a real table and real cards.</p></div>
+<div class="section-head rv"><span class="kicker">How a round works</span><h2>Learn it in a minute</h2><p>The in-game tutorial walks you through it with a real table and real cards.</p></div>
 <div class="steps">
-<div class="step"><h3>Get your five cards</h3><p>Everyone is dealt a hand of five. Your goal is to end the round with the lowest hand value.</p></div>
-<div class="step"><h3>Discard and draw</h3><p>On your turn, discard one card or a matching pair, then draw a new card to improve your hand.</p></div>
-<div class="step"><h3>Call your show</h3><p>Think yours is the lowest hand? Call <b>Show</b>: if you are right you score zero, but a wrong call costs you a penalty. The highest score each round is knocked out, and the last player standing wins.</p></div>
+<div class="step rv"><h3>Get your five cards</h3><p>Everyone is dealt a hand of five. Your goal is to end the round with the lowest hand value.</p></div>
+<div class="step rv"><h3>Discard and draw</h3><p>On your turn, discard one card or a matching pair, then draw a new card to improve your hand.</p></div>
+<div class="step rv"><h3>Call your show</h3><p>Think yours is the lowest hand? Call <b>Show</b>: if you are right you score zero, but a wrong call costs you a penalty. The highest score each round is knocked out, and the last player standing wins.</p></div>
 </div></div></section>
 
 <section class="party"><div class="container">
@@ -275,8 +348,8 @@ code{background:#eef2fb;padding:2px 7px;border-radius:6px;font-size:.92em}
 </div></section>
 
 <section id="faq"><div class="container">
-<div class="section-head"><span class="kicker">Good to know</span><h2>Questions, answered</h2></div>
-<div class="faq"><details><summary>Is 5 Cards free?</summary><p>Yes. 5 Cards is free to download and play. You earn coins by playing and from daily rewards, and you can also top up with optional in-app purchases if you like. You never need to buy anything to play.</p></details><details><summary>Is it gambling?</summary><p>No. 5 Cards is a party card game played for fun. There are no cash prizes and coins can never be turned into money, goods or services. Just bragging rights and good vibes.</p></details><details><summary>Can I play with my friends?</summary><p>Absolutely. Open a private room, share the room code and your friends can jump straight in. You can also add friends and invite them to a game.</p></details><details><summary>Which devices does it run on?</summary><p>5 Cards is built for Android phones. It is coming soon to Google Play.</p></details><details><summary>How do I sign in?</summary><p>Continue with Google or Facebook, or jump in as a guest. We never see your passwords.</p></details><details><summary>How do I delete my account?</summary><p>In the game go to Settings, Support, Delete Account. No game installed? Email us and we will take care of it. See the <a href="/delete-account/">account deletion page</a>.</p></details></div>
+<div class="section-head rv"><span class="kicker">Good to know</span><h2>Questions, answered</h2></div>
+<div class="faq rv"><details><summary>Is 5 Cards free?</summary><p>Yes. 5 Cards is free to download and play. You earn coins by playing and from daily rewards, and you can also top up with optional in-app purchases if you like. You never need to buy anything to play.</p></details><details><summary>Is it gambling?</summary><p>No. 5 Cards is a party card game played for fun. There are no cash prizes and coins can never be turned into money, goods or services. Just bragging rights and good vibes.</p></details><details><summary>Can I play with my friends?</summary><p>Absolutely. Open a private room, share the room code and your friends can jump straight in. You can also add friends and invite them to a game.</p></details><details><summary>Which devices does it run on?</summary><p>5 Cards is built for Android phones. It is coming soon to Google Play.</p></details><details><summary>How do I sign in?</summary><p>Continue with Google or Facebook, or jump in as a guest. We never see your passwords.</p></details><details><summary>How do I delete my account?</summary><p>In the game go to Settings, Support, Delete Account. No game installed? Email us and we will take care of it. See the <a href="/delete-account/">account deletion page</a>.</p></details></div>
 </div></section>
 
 <section class="studio"><div class="container">
@@ -290,7 +363,7 @@ code{background:#eef2fb;padding:2px 7px;border-radius:6px;font-size:.92em}
 <img src="/assets/logo-5cards.webp" alt="5 Cards logo" width="190" height="172" loading="lazy">
 <h2>Ready for your first match?</h2>
 <p>5 Cards is coming to Google Play. Questions in the meantime? We would love to hear from you.</p>
-<div class="actions" style="justify-content:center"><a class="btn gold" href="/contact/">Get in touch</a><a class="btn ghost" href="/privacy/">Read our privacy policy</a></div>
+<div class="actions" style="justify-content:center"><a class="gp" href="/contact/" aria-label="Coming soon on Google Play"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d7fe" stroke="#00d7fe" stroke-width="22" stroke-linejoin="round" d="M60 40L290 256 60 472z"/><path fill="#00f076" stroke="#00f076" stroke-width="22" stroke-linejoin="round" d="M60 40L380 208 290 256z"/><path fill="#ff3a44" stroke="#ff3a44" stroke-width="22" stroke-linejoin="round" d="M60 472L380 304 290 256z"/><path fill="#ffc400" stroke="#ffc400" stroke-width="22" stroke-linejoin="round" d="M380 208L462 256 380 304 290 256z"/></svg><div><span>Coming soon on</span><b>Google Play</b></div></a><a class="btn ghost" href="/contact/">Get in touch</a><a class="btn ghost" href="/privacy/">Read our privacy policy</a></div>
 </div></section>
 
 <footer class="site-footer"><div class="container">
@@ -302,5 +375,12 @@ code{background:#eef2fb;padding:2px 7px;border-radius:6px;font-size:.92em}
 </div>
 <div class="fine">&copy; 2026 Noob Studios. All rights reserved. 5 Cards is a game of skill and luck played for fun: there is no gambling and no cash prizes, and coins cannot be turned into money. Coins can be earned in the game or bought with optional in-app purchases. Google Play is a trademark of Google LLC. Facebook is a trademark of Meta Platforms, Inc.</div>
 </div></footer>
+<script>
+(function(){var els=document.querySelectorAll(".rv");if(!els.length)return;
+if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12,rootMargin:"0px 0px -5% 0px"});
+els.forEach(function(e){io.observe(e)});
+setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},4000);})();
+</script>
 </body>
 </html>
