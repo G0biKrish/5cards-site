@@ -471,6 +471,10 @@ doc_page("/delete-account/", "Delete your account | 5 Cards",
 doc_page("/contact/", "Contact and support | 5 Cards", "Contact Noob Studios about 5 Cards.",
          "Help", "Contact and support", "We are here to help.", CONTACT)
 
+# Google AdMob asks for this file at the domain root (the developer website of the Play listing): it lists
+# who may sell this app's ads. The publisher id is public.
+with open(os.path.join(ROOT, "app-ads.txt"), "w", newline="\n") as f:
+    f.write("google.com, pub-2996531756521198, DIRECT, f08c47fec0942fa0\n")
 with open(os.path.join(ROOT, "robots.txt"), "w", newline="\n") as f:
     f.write("User-agent: *\nAllow: /\n")
 print("built")
