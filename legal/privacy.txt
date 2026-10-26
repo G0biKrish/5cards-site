@@ -33,7 +33,7 @@ Technical information collected automatically
 - Device and app information: app version, operating system and version, device model, language, and the time zone and settings that the Game needs to run.
 - Connection information: IP address, connection and session logs, error and crash information, and timestamps. We use your IP address for security, for fair play, to limit abuse (for example account farming), and to estimate your country.
 - Purchase information: when you buy Coins in the Game, Google Play tells us that the purchase happened. We receive the product bought, the order ID, the purchase time and a purchase token, and we check them with Google before adding the Coins to your balance. We keep these records to deliver your Coins, to handle refunds, failed purchases and disputes, to prevent fraud, and to meet tax and accounting duties. We do not receive your payment method details.
-- Advertising information: if you choose to watch a rewarded ad, our ad partner may collect your device's advertising ID and related device and ad-interaction data under its own policy.
+- Advertising information: if you choose to watch a rewarded ad, our ad partner, Google AdMob, may collect your device's advertising ID, IP address (and so approximate location) and related device and ad-interaction data under Google's own policy. Ads are limited to family-friendly content: we block adult, gambling and alcohol ads.
 
 What we do not collect
 
@@ -65,7 +65,7 @@ We do not sell your personal data. We do not use your data for automated decisio
 - Google: for sign-in. Google processes your data under Google's Privacy Policy.
 - Facebook (Meta): for sign-in. Meta processes your data under Meta's Privacy Policy. You can remove the Game's access at any time in your Facebook settings (Settings, Apps and websites).
 - Our hosting and infrastructure providers: our game servers and database run on cloud infrastructure that stores and processes your data for us under contract and only on our instructions.
-- Advertising partners: only if you choose to watch a rewarded ad, to serve the ad and verify that you completed it. They act under their own privacy policies.
+- Advertising partners: Google AdMob, only if you choose to watch a rewarded ad, to serve the ad and verify that you completed it. Google acts under its own privacy policy. Where the law asks for it (for example in the European Economic Area and the United Kingdom), we first ask for your choice about ads in a consent form, and you can change it later in Settings, About, Ad Privacy Choices.
 - Other players: see section 2 for what is visible to other players.
 - Authorities and professional advisers: when the law requires it, to enforce our Terms, or to protect rights, safety and security.
 - A buyer or successor: if the Game or our business is sold or merged, your data may transfer to the new owner, who must follow this policy or tell you of any change.
@@ -92,7 +92,7 @@ You can:
 - withdraw your consent at any time (this does not affect what we did before, and it may mean we can no longer provide the Game);
 - ask a question or make a complaint about how we handle your data, to our grievance contact in section 1; we aim to respond within 30 days;
 - nominate another person to exercise your rights in the event of your death or incapacity (as the Indian DPDP Act allows);
-- opt out of personalised ads by resetting or deleting your advertising ID in your Android settings (Settings, Privacy, Ads), and by simply not watching rewarded ads.
+- opt out of personalised ads by resetting or deleting your advertising ID in your Android settings (Settings, Privacy, Ads), and by simply not watching rewarded ads. Players aged 16 and 17 are never shown personalised ads.
 
 To use these rights, email noobstudios.in@gmail.com from the address linked to your Google or Facebook account and include your Player ID (shown on your profile). We may need to verify your identity before we act. If you are not satisfied with our response, you may complain to the Data Protection Board of India or to your local data protection authority.
 
