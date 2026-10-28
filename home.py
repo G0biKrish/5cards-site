@@ -394,7 +394,7 @@ def home_body():
          "Every win earns trophies. Rise from Rookie to Challenger to Ace on the Trophy Road, grab a reward at every step and see how you stack up on the global and friends leaderboards.",
          ["Seasonal Trophy Road with rewards", "Global and friends leaderboards", "Daily challenges and bonuses"], "trophy", "The Trophy Road with tiers from Rookie to Ace"),
         ("coin", "Make it yours", "Show off your style",
-         "Unlock striking card skins, emotes and quick chat lines in the shop. Earn coins by playing and from free daily rewards like Lucky Pick and Scratch Your Luck, or top up with optional in-app coin packs.",
+         "Unlock striking card skins, emotes and quick chat lines in the shop. Earn coins by playing and from free daily rewards like Pick Your Luck and Scratch Your Luck, or top up with optional in-app coin packs.",
          ["Dozens of card skins to collect", "Free daily coins", "Optional in-app coin packs"], "shop", "The shop with card skins"),
     ]
     step_html = ""
