@@ -1,6 +1,6 @@
 # 5 Cards Terms of Service
 
-Effective date: 26 October 2026
+Effective date: 30 October 2026
 
 These Terms of Service ("Terms") are a binding agreement between you and Noob Studios ("Noob Studios", "we", "us", "our") for your use of the 5 Cards mobile card game and the online services behind it (together, the "Game"). Please read them carefully. By tapping the consent box on the sign-in screen, or by installing or playing the Game, you confirm that you have read, understood and accepted these Terms and our Privacy Policy. If you do not agree, do not use the Game.
 
@@ -33,8 +33,8 @@ These Terms of Service ("Terms") are a binding agreement between you and Noob St
 - Coins you spend as a table entry fee or a private room fee are used up for that match or room according to the rules shown in the Game before you confirm. Where the Game says a fee is returned (for example when a room is closed before it starts), it is returned to your balance.
 - We may add, change, rebalance, reset or remove Virtual Items, prices, fees and rewards, for example to fix errors, stop abuse, keep the Game fair, or because a feature changes. Where practical we will tell you in advance for material changes.
 - Optional in-app purchases: you can buy packs of Coins with real money through Google Play. Buying is always optional, and every feature of the Game can also be enjoyed with Coins earned by playing. The price, including applicable taxes, is shown by Google Play before you confirm. Payment is taken by Google Play, not by us.
-- Coins you buy are Virtual Items. They are delivered to your account after Google Play confirms the payment and we have checked the purchase. They have no cash value, cannot be refunded to money by us, and cannot be withdrawn, transferred or exchanged. If Coins do not arrive, contact us with your Google Play order ID and we will fix it.
-- Refunds and cancellations of purchases are handled by Google Play under its own terms and refund policy, and your rights under applicable consumer law are not affected. If Google Play refunds or reverses a purchase, we may remove the Coins from that purchase, which can leave your balance lower or at zero.
+- Coins you buy are Virtual Items. They are delivered to your account after Google Play confirms the payment and we have checked the purchase. They have no cash value and cannot be withdrawn, exchanged for money, sold, gifted or transferred to another account or person. All purchases are final: we do not refund a purchase of Coins, and a purchase cannot be cancelled once the Coins are delivered. If Coins do not arrive, contact us with your Google Play order ID and we will fix it.
+- Refunds are decided only by Google Play, under its own terms and refund policy, and your rights under applicable consumer law are not affected. If Google Play refunds, reverses or charges back a purchase, the Coins from that purchase are removed from your account automatically. Coins you have already spent cannot be taken back, so your balance is reduced by what is left of them, and never below zero. We may record the part we could not take back against your account, and we may restrict or close accounts that repeatedly get refunds after spending the Coins.
 - If your account is closed for breaking these Terms, unused purchased Coins may be lost, except where the law requires otherwise.
 - If you are under 18, you may buy Coins only with the permission of a parent or guardian who controls the payment method.
 
