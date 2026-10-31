@@ -477,4 +477,34 @@ with open(os.path.join(ROOT, "app-ads.txt"), "w", newline="\n") as f:
     f.write("google.com, pub-2996531756521198, DIRECT, f08c47fec0942fa0\n")
 with open(os.path.join(ROOT, "robots.txt"), "w", newline="\n") as f:
     f.write("User-agent: *\nAllow: /\n")
+
+
+def write_headers():
+    """Cloudflare Pages' _headers: the security headers of every page. The CSP lets only the inline scripts these
+    pages really have run (their SHA-256, worked out from the pages just built), so a rebuild keeps it right."""
+    import base64
+    import glob
+    import hashlib
+    import re
+    hashes = set()
+    for page in glob.glob(os.path.join(ROOT, "**", "index.html"), recursive=True):
+        with open(page, encoding="utf-8") as f:
+            for script in re.findall(r"<script>(.*?)</script>", f.read(), re.S):
+                hashes.add("'sha256-" + base64.b64encode(hashlib.sha256(script.encode("utf-8")).digest()).decode() + "'")
+    csp = ("default-src 'none'; script-src " + " ".join(sorted(hashes)) + "; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+           "font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; "
+           "frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests")
+    with open(os.path.join(ROOT, "_headers"), "w", newline="\n") as f:
+        f.write("# Written by build.py (do not edit): the security headers Cloudflare Pages sends with every page.\n"
+                "/*\n"
+                "  Content-Security-Policy: " + csp + "\n"
+                "  Strict-Transport-Security: max-age=31536000; includeSubDomains\n"
+                "  X-Frame-Options: DENY\n"
+                "  X-Content-Type-Options: nosniff\n"
+                "  Referrer-Policy: strict-origin-when-cross-origin\n"
+                "  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()\n"
+                "  Cross-Origin-Opener-Policy: same-origin\n")
+
+
+write_headers()
 print("built")
