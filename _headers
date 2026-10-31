@@ -1,0 +1,9 @@
+# Written by build.py (do not edit): the security headers Cloudflare Pages sends with every page.
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-aoYAn2WHbPT+v8scjqkNCF8Rjkb4yQc4V72w5V6/2qs=' 'sha256-hnp5VEuXeOU5VBdG6QQIPlUfGF5fYtbXMsOTsz7PhKU=' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
